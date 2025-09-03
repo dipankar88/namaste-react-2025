@@ -1,0 +1,234 @@
+{\rtf1\ansi\ansicpg1252\cocoartf2822
+\cocoatextscaling0\cocoaplatform0{\fonttbl\f0\froman\fcharset0 Times-Bold;\f1\froman\fcharset0 Times-Roman;\f2\fmodern\fcharset0 Courier;
+\f3\fnil\fcharset0 Menlo-Regular;}
+{\colortbl;\red255\green255\blue255;\red0\green0\blue0;\red109\green109\blue109;\red0\green0\blue0;
+}
+{\*\expandedcolortbl;;\cssrgb\c0\c0\c0;\cssrgb\c50196\c50196\c50196;\csgray\c0;
+}
+{\*\listtable{\list\listtemplateid1\listhybrid{\listlevel\levelnfc23\levelnfcn23\leveljc0\leveljcn0\levelfollow0\levelstartat1\levelspace360\levelindent0{\*\levelmarker \{disc\}}{\leveltext\leveltemplateid1\'01\uc0\u8226 ;}{\levelnumbers;}\fi-360\li720\lin720 }{\listname ;}\listid1}
+{\list\listtemplateid2\listhybrid{\listlevel\levelnfc23\levelnfcn23\leveljc0\leveljcn0\levelfollow0\levelstartat1\levelspace360\levelindent0{\*\levelmarker \{disc\}}{\leveltext\leveltemplateid101\'01\uc0\u8226 ;}{\levelnumbers;}\fi-360\li720\lin720 }{\listname ;}\listid2}
+{\list\listtemplateid3\listhybrid{\listlevel\levelnfc23\levelnfcn23\leveljc0\leveljcn0\levelfollow0\levelstartat1\levelspace360\levelindent0{\*\levelmarker \{disc\}}{\leveltext\leveltemplateid201\'01\uc0\u8226 ;}{\levelnumbers;}\fi-360\li720\lin720 }{\listname ;}\listid3}}
+{\*\listoverridetable{\listoverride\listid1\listoverridecount0\ls1}{\listoverride\listid2\listoverridecount0\ls2}{\listoverride\listid3\listoverridecount0\ls3}}
+\paperw11900\paperh16840\margl1440\margr1440\vieww11520\viewh8400\viewkind0
+\deftab720
+\pard\pardeftab720\sa298\partightenfactor0
+
+\f0\b\fs36 \cf0 \expnd0\expndtw0\kerning0
+\outl0\strokewidth0 \strokec2 \uc0\u9989  GOAL:\
+\pard\tx220\tx720\pardeftab720\li720\fi-720\sa240\partightenfactor0
+\ls1\ilvl0
+\f1\b0\fs24 \cf0 \kerning1\expnd0\expndtw0 \outl0\strokewidth0 {\listtext	\uc0\u8226 	}\expnd0\expndtw0\kerning0
+\outl0\strokewidth0 \strokec2 Use 
+\f0\b GitHub Account A
+\f1\b0  for Folder A\
+\ls1\ilvl0\kerning1\expnd0\expndtw0 \outl0\strokewidth0 {\listtext	\uc0\u8226 	}\expnd0\expndtw0\kerning0
+\outl0\strokewidth0 \strokec2 Use 
+\f0\b GitHub Account B
+\f1\b0  for Folder B\
+\ls1\ilvl0\kerning1\expnd0\expndtw0 \outl0\strokewidth0 {\listtext	\uc0\u8226 	}\expnd0\expndtw0\kerning0
+\outl0\strokewidth0 \strokec2 Avoid conflicts by using 
+\f0\b separate SSH keys
+\f1\b0  per account\
+\pard\pardeftab720\partightenfactor0
+\cf3 \strokec3 \
+\pard\pardeftab720\sa298\partightenfactor0
+
+\f0\b\fs36 \cf0 \strokec2 \uc0\u55357 \u56615  STEP-BY-STEP SETUP\
+\pard\pardeftab720\partightenfactor0
+
+\f1\b0\fs24 \cf3 \strokec3 \
+\pard\pardeftab720\sa280\partightenfactor0
+
+\f0\b\fs28 \cf0 \strokec2 \uc0\u55357 \u56593  1. Generate a separate SSH key for each GitHub account\
+\pard\pardeftab720\sa240\partightenfactor0
+
+\f1\b0\fs24 \cf0 Let\'92s say:\
+\pard\tx220\tx720\pardeftab720\li720\fi-720\sa240\partightenfactor0
+\ls2\ilvl0
+\f0\b \cf0 \kerning1\expnd0\expndtw0 \outl0\strokewidth0 {\listtext	\uc0\u8226 	}\expnd0\expndtw0\kerning0
+\outl0\strokewidth0 \strokec2 Personal account
+\f1\b0  \uc0\u8594  key: 
+\f2\fs26 ~/.ssh/id_ed25519_personal
+\f1\fs24 \
+\ls2\ilvl0
+\f0\b \kerning1\expnd0\expndtw0 \outl0\strokewidth0 {\listtext	\uc0\u8226 	}\expnd0\expndtw0\kerning0
+\outl0\strokewidth0 \strokec2 Work account
+\f1\b0  \uc0\u8594  key: 
+\f2\fs26 ~/.ssh/id_ed25519_work
+\f1\fs24 \
+\pard\pardeftab720\sa319\partightenfactor0
+
+\f0\b \cf0 \uc0\u55357 \u56393  For personal GitHub:\
+\pard\pardeftab720\partightenfactor0
+
+\f2\b0\fs26 \cf0 \
+ssh-keygen -t ed25519 -C "your-personal-email@example.com" -f ~/.ssh/id_ed25519_personal\
+\pard\pardeftab720\sa319\partightenfactor0
+
+\f0\b\fs24 \cf0 \uc0\u55357 \u56393  For work GitHub:\
+\pard\pardeftab720\partightenfactor0
+
+\f2\b0\fs26 \cf0 \
+ssh-keygen -t ed25519 -C "your-work-email@company.com" -f ~/.ssh/id_ed25519_work\
+\pard\pardeftab720\partightenfactor0
+
+\f1\fs24 \cf3 \strokec3 \
+\pard\pardeftab720\sa280\partightenfactor0
+
+\f0\b\fs28 \cf0 \strokec2 \uc0\u55357 \u56960  2. Add the keys to your SSH agent\
+\pard\pardeftab720\partightenfactor0
+
+\f2\b0\fs26 \cf0 \
+eval "$(ssh-agent -s)"\
+ssh-add ~/.ssh/id_ed25519_personal\
+ssh-add ~/.ssh/id_ed25519_work\
+\pard\pardeftab720\partightenfactor0
+
+\f1\fs24 \cf3 \strokec3 \
+\pard\pardeftab720\sa280\partightenfactor0
+
+\f0\b\fs28 \cf0 \strokec2 \uc0\u55356 \u57101  3. Add the public keys to GitHub\
+\pard\pardeftab720\sa319\partightenfactor0
+
+\fs24 \cf0 For personal:\
+\pard\pardeftab720\partightenfactor0
+
+\f2\b0\fs26 \cf0 \
+pbcopy < ~/.ssh/id_ed25519_personal.pub\
+\pard\pardeftab720\sa319\partightenfactor0
+
+\f0\b\fs24 \cf0 For work:\
+\pard\pardeftab720\partightenfactor0
+
+\f2\b0\fs26 \cf0 \
+pbcopy < ~/.ssh/id_ed25519_work.pub\
+\pard\pardeftab720\sa240\partightenfactor0
+
+\f1\fs24 \cf0 Then go to 
+\f0\b each GitHub account
+\f1\b0  \uc0\u8594  
+\f0\b Settings
+\f1\b0  \uc0\u8594  
+\f0\b SSH and GPG Keys
+\f1\b0  \uc0\u8594  
+\f0\b New SSH key
+\f1\b0 , and paste the key.\
+\pard\pardeftab720\partightenfactor0
+\cf3 \strokec3 \
+\pard\pardeftab720\sa280\partightenfactor0
+
+\f0\b\fs28 \cf0 \strokec2 \uc0\u55358 \u56813  4. Edit your SSH config file\
+\pard\pardeftab720\sa240\partightenfactor0
+
+\f1\b0\fs24 \cf0 Open the config file:\
+\pard\pardeftab720\partightenfactor0
+
+\f2\fs26 \cf0 \
+nano ~/.ssh/config\
+\pard\pardeftab720\sa240\partightenfactor0
+
+\f1\fs24 \cf0 Paste this:\
+\pard\pardeftab720\partightenfactor0
+
+\f2\fs26 \cf0 \
+# Personal GitHub\
+Host github-personal\
+  HostName github.com\
+  User git\
+  IdentityFile ~/.ssh/id_ed25519_personal\
+  IdentitiesOnly yes\
+\
+# Work GitHub\
+Host github-work\
+  HostName github.com\
+  User git\
+  IdentityFile ~/.ssh/id_ed25519_work\
+  IdentitiesOnly yes\
+\pard\pardeftab720\sa240\partightenfactor0
+
+\f1\fs24 \cf0 This allows you to 
+\f0\b route different SSH keys
+\f1\b0  to the correct GitHub account.\
+\pard\pardeftab720\partightenfactor0
+\cf3 \strokec3 \
+\pard\pardeftab720\sa280\partightenfactor0
+
+\f0\b\fs28 \cf0 \strokec2 \uc0\u55357 \u56577  5. Clone your repos using custom hostnames\
+\pard\pardeftab720\sa319\partightenfactor0
+
+\fs24 \cf0 For personal:\
+\pard\pardeftab720\partightenfactor0
+
+\f2\b0\fs26 \cf0 \
+git clone git@github-personal:your-personal-username/your-repo.git\
+\pard\pardeftab720\sa319\partightenfactor0
+
+\f0\b\fs24 \cf0 For work:\
+\pard\pardeftab720\partightenfactor0
+
+\f2\b0\fs26 \cf0 \
+git clone git@github-work:your-work-username/your-work-repo.git\
+\pard\pardeftab720\sa240\partightenfactor0
+
+\f1\fs24 \cf0 \uc0\u9888 \u65039  You can\'92t use the regular 
+\f2\fs26 git@github.com:
+\f1\fs24  anymore \'97 use 
+\f2\fs26 github-personal
+\f1\fs24  or 
+\f2\fs26 github-work
+\f1\fs24  as defined above.\
+\pard\pardeftab720\partightenfactor0
+\cf3 \strokec3 \
+\pard\pardeftab720\sa280\partightenfactor0
+
+\f0\b\fs28 \cf0 \strokec2 \uc0\u55357 \u56550  6. (Optional) Set email per folder/repo\
+\pard\pardeftab720\sa240\partightenfactor0
+
+\f1\b0\fs24 \cf0 Inside each repo:\
+\pard\pardeftab720\partightenfactor0
+
+\f2\fs26 \cf0 \
+git config user.name "Your Name"\
+git config user.email "your-email@example.com"\
+\pard\pardeftab720\sa240\partightenfactor0
+
+\f1\fs24 \cf0 This ensures commits from each folder are attributed to the correct GitHub account.\
+\pard\pardeftab720\partightenfactor0
+\cf3 \strokec3 \
+\pard\pardeftab720\sa298\partightenfactor0
+
+\f0\b\fs36 \cf0 \strokec2 \uc0\u9989  Done!\
+\pard\pardeftab720\sa240\partightenfactor0
+
+\f1\b0\fs24 \cf0 From now on:\
+\pard\tx220\tx720\pardeftab720\li720\fi-720\sa240\partightenfactor0
+\ls3\ilvl0\cf0 \kerning1\expnd0\expndtw0 \outl0\strokewidth0 {\listtext	\uc0\u8226 	}\expnd0\expndtw0\kerning0
+\outl0\strokewidth0 \strokec2 Work repos use the 
+\f2\fs26 github-work
+\f1\fs24  key\
+\ls3\ilvl0\kerning1\expnd0\expndtw0 \outl0\strokewidth0 {\listtext	\uc0\u8226 	}\expnd0\expndtw0\kerning0
+\outl0\strokewidth0 \strokec2 Personal repos use the 
+\f2\fs26 github-personal
+\f1\fs24  key\
+\ls3\ilvl0\kerning1\expnd0\expndtw0 \outl0\strokewidth0 {\listtext	\uc0\u8226 	}\expnd0\expndtw0\kerning0
+\outl0\strokewidth0 \strokec2 No conflicts or push errors\
+\ls3\ilvl0\kerning1\expnd0\expndtw0 \outl0\strokewidth0 {\listtext	\uc0\u8226 	}\expnd0\expndtw0\kerning0
+\outl0\strokewidth0 \strokec2 Each folder is isolated to one GitHub identity\
+\pard\tx220\tx720\pardeftab720\li720\fi-720\sa240\partightenfactor0
+\cf0 \
+\
+\
+Post that perform the below steps in local : \
+\pard\tx560\tx1120\tx1680\tx2240\tx2800\tx3360\tx3920\tx4480\tx5040\tx5600\tx6160\tx6720\pardirnatural\partightenfactor0
+
+\f3\fs22 \cf4 \kerning1\expnd0\expndtw0 \CocoaLigature0 \outl0\strokewidth0 > git clone git@github-personal:dipankar88/namaste-react-2025.git\
+> cd namaste-react-2025\
+> git init\
+> git status\
+> git add .\
+> git commit -m \'93message\'94\
+> git branch -M main\
+> git remote add origin git@dipankar88/namaste-react-2025.git\
+> git push origin main\
+\
+Check the repo in git-hub repository}
