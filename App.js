@@ -1,58 +1,43 @@
-// const heading = React.createElement('h1', { id: 'heading1', class: 'heading1'}, 'Hello World from React!');
-// const root = ReactDOM.createRoot(document.getElementById('root'));
-// root.render(heading);
-
-/*
-<div id='parent'>
-    <div id='child1'>
-        <h1>I'm an h1 tag.</h1>
-        <h2>I'm an h2 tag.</h2>
-    </div>
-    <div id='child2'>
-        <h1>I'm an h1 tag.</h1>
-        <h2>I'm an h2 tag.</h2>
-    </div>
-</div>
-*/
-// import React from "react";
-// import ReactDOM from 'react-dom/client';
-
-// const parent = React.createElement('div',
-//     {id: 'parent'},
-//     [
-//         React.createElement('div', {id: 'child1', key: 'child1'},
-//         [
-//             React.createElement('h1', {key: 'h1-1'}, "I'm an h1 tag"),
-//             React.createElement('h2', {key: 'h2-1'}, "I'm an h2 tag")
-//         ]),
-//         React.createElement('div', {id: 'child2', key: 'child2'},
-//         [
-//             React.createElement('h1', {key: 'h1-2'}, "I'm an h1 tag"),
-//             React.createElement('h2', {key: 'h2-2'}, "I'm an h2 tag")
-//         ])
-//     ]);
-// console.log(parent);
-// const root = ReactDOM.createRoot(document.getElementById('root'));
-// root.render(parent);
-
 import React from "react";
 import ReactDOM from 'react-dom/client';
+import Header from "./src/components/Header";
+import Body from "./src/components/Body";
+import Contact from "./src/components/Contact";
+import About from "./src/components/About";
+import { BrowserRouter, createBrowserRouter, Route, Routes, RouterProvider } from "react-router";
 
-const heading = <h1>Heading 1</h1>; //React Element
-const Title = () => (
-    <h1>Namaste React By Akshay</h1>
-);
+const AppLayout = () => {
+    return (
+        <BrowserRouter>
+            <div className="app">
+                <Header />
+                <div className="content" style={{ flex: 1 }}>
+                    <Routes>
+                        <Route path="/" element={<Body />} />
+                        <Route path="/about" element={<About />} />
+                        <Route path="/contact" element={<Contact />} />
+                    </Routes>
+                </div>
+            </div>
+        </BrowserRouter>
+    );
+};
 
-// Functional Component
-const Heading = () => ( //JSX
-    <div id="container">
-        {Title()}
-        <Title />
-        <Title></Title>
-        {heading}
-        <p>This is React Heading Component</p>
-    </div>
-);
+// const appRouter = createBrowserRouter([
+//     {
+//         path: "/",
+//         element: <AppLayout />
+//     },
+//     {
+//         path: "/about",
+//         element: <About />
+//     },
+//     {
+//         path: "/contact",
+//         element: <Contact />
+//     }
+// ]);
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
-root.render(<Heading />);
+// root.render(<RouterProvider router={<AppLayout />} />);
+root.render(<AppLayout />);
