@@ -1,5 +1,7 @@
 import React from 'react';
 import '../styles/AboutUs.css';
+import User from './User';
+import UserClass from './UserClass';
 
 const About = () => {
   return (
@@ -36,6 +38,11 @@ const About = () => {
           of innovators, designers, and delivery experts committed to transforming
           the way India eats.
         </p>
+      </section>
+      <section>
+        <User name={"Dipankar Ghosh(function)"} location={"Bangalore - function"} />
+        <br />
+        <UserClass name={"Dipankar Ghosh(class)"} location={"Bangalore - Class"} />
       </section>
 
       <section className="about-footer">
