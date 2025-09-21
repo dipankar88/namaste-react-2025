@@ -2,3 +2,11 @@
     padding: 10px;
     border: 1px solid black;
 }
+.count-fn {
+    display: flex;
+}
+.increment {
+    margin: 10px;
+    height: 35px;
+    width: 35px;
+}
