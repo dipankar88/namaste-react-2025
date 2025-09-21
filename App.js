@@ -23,21 +23,5 @@ const AppLayout = () => {
     );
 };
 
-// const appRouter = createBrowserRouter([
-//     {
-//         path: "/",
-//         element: <AppLayout />
-//     },
-//     {
-//         path: "/about",
-//         element: <About />
-//     },
-//     {
-//         path: "/contact",
-//         element: <Contact />
-//     }
-// ]);
-
 const root = ReactDOM.createRoot(document.getElementById('root'));
-// root.render(<RouterProvider router={<AppLayout />} />);
 root.render(<AppLayout />);
