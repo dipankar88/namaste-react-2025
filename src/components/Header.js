@@ -1,6 +1,8 @@
 import { Link, NavLink } from "react-router";
 import '../styles/Header.css'
+import useOnlineStatus from "../utils/useOnlineStatus";
 const Header = () => {
+    const onlineStatus = useOnlineStatus();
     const myStyle = {
         height: '110px',
         width: '90px'
@@ -13,6 +15,7 @@ const Header = () => {
         </div>
         <div className="nav-items">
             <ul>
+                <li>Online Status : {onlineStatus ? "🟢" : "🔴"}</li>
                 <li>
                     <Link to={"/"}>Home</Link>
                 </li>

@@ -1,4 +1,9 @@
+import useRestaurantMenu from "../utils/useRestaurantMenu";
 const RestaurantCard = () => {
+    
+    const dataInfo = useRestaurantMenu();
+    console.log(dataInfo);
+
     return (
         <div>
             <img></img>

@@ -1,0 +1,1 @@
+export const MENU_API = "https://cors-anywhere.herokuapp.com/https://pastebin.com/raw/0QcdEDBL";
