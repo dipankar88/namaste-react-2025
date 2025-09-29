@@ -1,6 +1,7 @@
 import { Link, NavLink } from "react-router";
 import '../styles/Header.css'
 import useOnlineStatus from "../utils/useOnlineStatus";
+
 const Header = () => {
     const onlineStatus = useOnlineStatus();
     const myStyle = {
@@ -24,6 +25,9 @@ const Header = () => {
                 </li>
                 <li>
                     <NavLink className={({isActive})=>(isActive ? 'activeLink' : '')} to={"/contact"}>Contact Us</NavLink>
+                </li>
+                <li>
+                    <Link to={"/grocery"}>Grocery</Link>
                 </li>
             </ul>
         </div>
