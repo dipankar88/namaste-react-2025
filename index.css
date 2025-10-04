@@ -1,4 +1,1 @@
-#heading1 {
-    color: aliceblue;
-    background-color: red;
-}
+@import "tailwindcss";

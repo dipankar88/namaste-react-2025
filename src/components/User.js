@@ -1,18 +1,18 @@
 import { useState } from 'react';
-import '../styles/User.css';
+// import '../styles/User.css';
 
 const User = ({name, location}) => {
     const [count, setCount] = useState(0);
     return (
-        <div className="user-card">
-            <div className='count-fn'>
-                <h1>Count: {count}</h1>
-                <button className='increment' onClick={() => setCount(count + 1)}>+</button>
+        <div className="user-card border border-solid rounded-xl m-1 p-3">
+            <div className='count-fn flex'>
+                <p><strong>Count : </strong>{count}</p>
+                <button className='increment bg-amber-200 px-2 mx-2 rounded-2xl' onClick={() => setCount(count + 1)}>+</button>
             </div>
 
-            <h2>Name: {name}</h2>
-            <h3>Location: {location}</h3>
-            <h3>Learning: JavaScript and React</h3>
+            <h2><strong>Name : </strong>{name}</h2>
+            <h3><strong>Location : </strong>{location}</h3>
+            <h3><strong>Learning : </strong>JavaScript and React</h3>
             <p>Functional Component</p>
         </div>
     );

@@ -9,25 +9,31 @@ const Header = () => {
         width: '90px'
     };
     return ( //JSX
-    <div style={{display: "flex", border: "1px solid black", width: "100%"}}>
-        <div className="logo-container" style={{height: "100%"}}>
-            <img className="logo" style={myStyle}
+    <div className="flex justify-between shadow-lg m-2">
+        <div className="logo-container mb-3">
+            <img className="w-40"
             src="https://graphicsfamily.com/wp-content/uploads/edd/2021/11/Logo-Template-for-Food--2048x1152.jpg"/>
         </div>
-        <div className="nav-items">
-            <ul>
-                <li>Online Status : {onlineStatus ? "🟢" : "🔴"}</li>
-                <li>
+        <div className="flex items-center mb-3">
+            <ul className="flex px-4 m-4">
+                <li className="px-4">Online Status : {onlineStatus ? "🟢" : "🔴"}</li>
+                <li className="px-4">
                     <Link to={"/"}>Home</Link>
                 </li>
-                <li>
+                <li className="px-4">
                     <Link to={"/about"}>About Us</Link>
                 </li>
-                <li>
+                <li className="px-4">
                     <NavLink className={({isActive})=>(isActive ? 'activeLink' : '')} to={"/contact"}>Contact Us</NavLink>
                 </li>
-                <li>
+                <li className="px-4">
                     <Link to={"/grocery"}>Grocery</Link>
+                </li>
+                <li className="px-4">
+                    <Link >Cart</Link>
+                </li>
+                <li className="px-4">
+                    <Link>Login</Link>
                 </li>
             </ul>
         </div>
